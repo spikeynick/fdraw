@@ -20,13 +20,15 @@ class Ui_boxDraw(object):
         if not boxDraw.objectName():
             boxDraw.setObjectName(u"boxDraw")
         boxDraw.resize(1151, 990)
-        self.verticalLayout = QVBoxLayout(boxDraw)
-        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout_2 = QVBoxLayout(boxDraw)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.canvas = ImageW(boxDraw)
         self.canvas.setObjectName(u"canvas")
 
-        self.verticalLayout.addWidget(self.canvas)
+        self.verticalLayout_2.addWidget(self.canvas)
 
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setObjectName(u"verticalLayout")
         self.horizontalLayout_4 = QHBoxLayout()
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout = QHBoxLayout()
@@ -112,7 +114,64 @@ class Ui_boxDraw(object):
 
         self.verticalLayout.addLayout(self.horizontalLayout_4)
 
-        self.verticalLayout.setStretch(0, 1)
+        self.horizontalLayout_7 = QHBoxLayout()
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_5 = QHBoxLayout()
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.label_4 = QLabel(boxDraw)
+        self.label_4.setObjectName(u"label_4")
+
+        self.horizontalLayout_5.addWidget(self.label_4)
+
+        self.colorBox = QSpinBox(boxDraw)
+        self.colorBox.setObjectName(u"colorBox")
+        self.colorBox.setMaximum(359)
+
+        self.horizontalLayout_5.addWidget(self.colorBox)
+
+
+        self.horizontalLayout_7.addLayout(self.horizontalLayout_5)
+
+        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_7.addItem(self.horizontalSpacer_6)
+
+        self.globalCheck = QCheckBox(boxDraw)
+        self.globalCheck.setObjectName(u"globalCheck")
+
+        self.horizontalLayout_7.addWidget(self.globalCheck)
+
+        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_7.addItem(self.horizontalSpacer_7)
+
+        self.horizontalLayout_6 = QHBoxLayout()
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.label_5 = QLabel(boxDraw)
+        self.label_5.setObjectName(u"label_5")
+
+        self.horizontalLayout_6.addWidget(self.label_5)
+
+        self.penWidthBox = QSpinBox(boxDraw)
+        self.penWidthBox.setObjectName(u"penWidthBox")
+        self.penWidthBox.setMinimum(1)
+
+        self.horizontalLayout_6.addWidget(self.penWidthBox)
+
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_6.addItem(self.horizontalSpacer_5)
+
+
+        self.horizontalLayout_7.addLayout(self.horizontalLayout_6)
+
+
+        self.verticalLayout.addLayout(self.horizontalLayout_7)
+
+
+        self.verticalLayout_2.addLayout(self.verticalLayout)
+
+        self.verticalLayout_2.setStretch(0, 1)
 
         self.retranslateUi(boxDraw)
 
@@ -126,5 +185,8 @@ class Ui_boxDraw(object):
         self.label_3.setText(QCoreApplication.translate("boxDraw", u"Speed", None))
         self.goBtn.setText(QCoreApplication.translate("boxDraw", u"Start", None))
         self.clearBtn.setText(QCoreApplication.translate("boxDraw", u"Clear", None))
+        self.label_4.setText(QCoreApplication.translate("boxDraw", u"Color Shift:", None))
+        self.globalCheck.setText(QCoreApplication.translate("boxDraw", u"Global Shift", None))
+        self.label_5.setText(QCoreApplication.translate("boxDraw", u"Line Thickness", None))
     # retranslateUi
 

@@ -20,7 +20,9 @@ class BoxDraw(QFrame):
         self.ui.speedBox.valueChanged.connect(self.ui.canvas.update_speed)
         self.ui.goBtn.clicked.connect(self.ui.canvas.go_toggle)
         self.ui.clearBtn.clicked.connect(self.ui.canvas.do_clear)
-
+        self.ui.colorBox.valueChanged.connect(self.ui.canvas.update_color)
+        self.ui.globalCheck.toggled.connect(self.ui.canvas.update_global_color)
+        self.ui.penWidthBox.valueChanged.connect(self.ui.canvas.update_pen_width)
 
     def set_points(self, points):
         self.ui.canvas.set_points(points)
@@ -33,7 +35,7 @@ if __name__ == "__main__":
     app = QApplication([])
 
     w = BoxDraw()
-    w.set_points([QPoint(10,10), QPoint(100,500), QPoint(300, 600), QPoint(800,800), QPoint(900, 300), QPoint(600, 100)])
+    w.set_points([QPoint(10,10), QPoint(10,710), QPoint(710, 710), QPoint(710,10)])
 
 
 
